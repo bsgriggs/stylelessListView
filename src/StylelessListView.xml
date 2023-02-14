@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<widget id="mendix.stylelesslistview.StylelessListView" pluginWidget="true" needsEntityContext="true" offlineCapable="true"
+        supportedPlatform="Web"
+        xmlns="http://www.mendix.com/widget/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
+    <name>Styleless List View</name>
+    <description>List view without styling :)</description>
+    <icon/>
+    <properties>
+        <propertyGroup caption="General">
+            <property key="data" type="datasource" required="true" isList="true">
+                <caption>Data</caption>
+                <description></description>
+            </property>
+            <property key="content" type="widgets" required="true" dataSource="data">
+                <caption>Content</caption>
+                <description></description>
+            </property>
+            <property key="onClick" type="action" required="false" dataSource="data">
+                <caption>On Click</caption>
+                <description>The MxAction ran when the user clicks on a row</description>
+            </property>
+            <property key="direction" type="enumeration" defaultValue="vertical">
+                <caption>Direction</caption>
+                <description></description>
+                <enumerationValues>
+                    <enumerationValue key="vertical">Vertical</enumerationValue>
+                    <enumerationValue key="horizontal">Horizontal</enumerationValue>
+                </enumerationValues>
+            </property>
+        </propertyGroup>
+    </properties>
+</widget>
